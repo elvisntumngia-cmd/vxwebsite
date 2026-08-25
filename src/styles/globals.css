@@ -113,6 +113,101 @@ svg {
   -webkit-backdrop-filter: blur(22px);
 }
 
+.illuminated-panel {
+  --panel-light: 56, 189, 248;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 1px;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.075);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.42);
+  transition:
+    transform 400ms ease,
+    box-shadow 400ms ease;
+}
+
+.illuminated-panel--cyan {
+  --panel-light: 45, 212, 191;
+}
+.illuminated-panel--purple {
+  --panel-light: 168, 85, 247;
+}
+
+.illuminated-panel::before {
+  position: absolute;
+  inset: -120%;
+  z-index: -1;
+  content: "";
+  background: conic-gradient(
+    from 0deg,
+    transparent 0 84%,
+    rgba(var(--panel-light), 0.08) 87%,
+    rgba(var(--panel-light), 0.95) 89%,
+    rgba(255, 255, 255, 0.9) 90%,
+    rgba(var(--panel-light), 0.12) 93%,
+    transparent 96% 100%
+  );
+  animation: panel-circuit 8s linear var(--panel-delay) infinite;
+}
+
+.illuminated-panel__content {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  border-radius: calc(1rem - 1px);
+  background: linear-gradient(
+    145deg,
+    rgba(7, 10, 17, 0.98),
+    rgba(2, 4, 8, 0.985) 58%,
+    rgba(5, 8, 13, 0.98)
+  );
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.035),
+    inset 0 0 50px rgba(var(--panel-light), 0.018);
+  transition: box-shadow 400ms ease;
+}
+
+.illuminated-panel:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 28px 85px rgba(0, 0, 0, 0.55),
+    0 0 34px rgba(var(--panel-light), 0.08);
+}
+
+.illuminated-panel:hover .illuminated-panel__content {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    inset 0 0 70px rgba(var(--panel-light), 0.045);
+}
+
+@keyframes panel-circuit {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.process-energy {
+  animation: process-energy 4.8s ease-in-out infinite;
+}
+@keyframes process-energy {
+  from {
+    transform: translateX(-120%);
+  }
+  to {
+    transform: translateX(calc(700% + 4rem));
+  }
+}
+
+.lower-depth {
+  background: linear-gradient(
+    to bottom,
+    rgba(1, 2, 4, 0.18),
+    rgba(1, 2, 4, 0.76) 18%,
+    rgba(1, 2, 4, 0.93)
+  );
+}
+
 .space-grid {
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px),
@@ -220,5 +315,14 @@ svg {
 
   .space-star {
     animation: none;
+  }
+
+  .illuminated-panel::before {
+    animation: none;
+    transform: rotate(24deg);
+  }
+  .process-energy {
+    animation: none;
+    left: 42%;
   }
 }

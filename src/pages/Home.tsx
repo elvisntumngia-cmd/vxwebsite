@@ -4,6 +4,7 @@ import GrowthSystem from "@/sections/home/GrowthSystem";
 import ProofAndPeople from "@/sections/home/ProofAndPeople";
 import ServicesPreview from "@/sections/home/ServicesPreview";
 import WorkPricingStage from "@/sections/home/WorkPricingStage";
+import Faq from "@/sections/home/Faq";
 
 function Home() {
   return (
@@ -17,6 +18,7 @@ function Home() {
       <ServicesPreview />
       <WorkPricingStage />
       <ProofAndPeople />
+      <Faq />
     </main>
   );
 }

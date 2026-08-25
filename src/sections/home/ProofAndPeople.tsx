@@ -21,9 +21,9 @@ const proof = [
 function ProofAndPeople() {
   return (
     <>
-      <Section>
+      <Section className="lower-depth">
         <Container>
-          <div className="rounded-xl border border-white/10 bg-[#060a13]/75 p-6">
+          <div className="rounded-2xl border border-white/[.08] bg-black/35 p-6 sm:p-8">
             <p className="text-[.58rem] font-semibold uppercase tracking-[.24em] text-blue-400">
               What our work demonstrates
             </p>
@@ -43,15 +43,12 @@ function ProofAndPeople() {
                 </article>
               ))}
             </div>
-            <p className="mt-5 text-center text-[.58rem] text-slate-600">
-              Verified client testimonials can be introduced when approved.
-            </p>
           </div>
         </Container>
       </Section>
-      <Section>
+      <Section className="lower-depth py-10 sm:py-12">
         <Container>
-          <div className="grid gap-8 border-y border-white/10 py-10 lg:grid-cols-[.72fr_1.28fr] lg:items-center">
+          <div className="grid gap-6 border-y border-white/10 py-9 lg:grid-cols-[.72fr_1.28fr] lg:items-center">
             <div>
               <p className="text-[.58rem] font-semibold uppercase tracking-[.24em] text-purple-400">
                 The People Behind ViankaX
@@ -63,10 +60,9 @@ function ProofAndPeople() {
               </h2>
             </div>
             <p className="max-w-3xl text-sm leading-7 text-slate-300">
-              ViankaX brings strategy, design, engineering, automation, and
-              business understanding into one focused team. Real team profiles
-              and photography will replace this introduction when approved
-              content is available.
+              ViankaX combines strategy, design, engineering, automation, and
+              business understanding so technology stays accountable to real
+              people, real decisions, and the way a business actually works.
             </p>
           </div>
         </Container>
