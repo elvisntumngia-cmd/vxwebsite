@@ -67,7 +67,7 @@ function AmbientBackground({ showOrbital = false }: AmbientBackgroundProps) {
       </motion.div>
 
       <motion.div
-        className="absolute right-[18%] top-[12%] h-56 w-56 rounded-full bg-[#2463ff]/14 blur-[105px]"
+        className="ambient-light absolute right-[18%] top-[12%] h-56 w-56 rounded-full bg-[#2463ff]/14 blur-[60px] sm:blur-[105px]"
         animate={{
           x: [0, 36, -16, 0],
           y: [0, 26, 58, 0],
@@ -82,7 +82,7 @@ function AmbientBackground({ showOrbital = false }: AmbientBackgroundProps) {
       />
 
       <motion.div
-        className="absolute bottom-[7%] right-[36%] h-52 w-52 rounded-full bg-[#16e0be]/12 blur-[110px]"
+        className="ambient-light ambient-light-secondary absolute bottom-[7%] right-[36%] h-52 w-52 rounded-full bg-[#16e0be]/12 blur-[60px] sm:blur-[110px]"
         animate={{
           x: [0, 46, -20, 0],
           y: [0, -34, 12, 0],
@@ -97,7 +97,7 @@ function AmbientBackground({ showOrbital = false }: AmbientBackgroundProps) {
       />
 
       <motion.div
-        className="absolute bottom-[-4%] right-[4%] h-56 w-56 rounded-full bg-[#933cff]/13 blur-[115px]"
+        className="ambient-light ambient-light-secondary absolute bottom-[-4%] right-[4%] h-56 w-56 rounded-full bg-[#933cff]/13 blur-[60px] sm:blur-[115px]"
         animate={{
           x: [0, -42, 18, 0],
           y: [0, -38, -12, 0],
@@ -113,7 +113,7 @@ function AmbientBackground({ showOrbital = false }: AmbientBackgroundProps) {
 
       {showOrbital && (
         <motion.div
-          className="absolute right-[-7rem] top-[17%] h-[56%] w-[54%] min-w-[560px]"
+          className="ambient-orbit absolute right-[-7rem] top-[17%] h-[56%] w-[54%] min-w-[560px]"
           animate={{
             x: [0, -90, -30, 40, 0],
             y: [0, 70, 140, 50, 0],

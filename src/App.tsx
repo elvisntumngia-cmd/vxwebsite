@@ -1,6 +1,7 @@
 import { Route, Routes, useLocation } from "react-router";
 
 import AmbientBackground from "@/components/common/AmbientBackground";
+import ScrollToTop from "@/components/common/ScrollToTop";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Home from "@/pages/Home";
@@ -15,6 +16,7 @@ function App() {
   return (
     <div className="relative min-h-screen overflow-x-hidden bg-transparent">
       <AmbientBackground showOrbital={location.pathname === "/"} />
+      <ScrollToTop />
       <Header />
 
       <div className="relative z-10">

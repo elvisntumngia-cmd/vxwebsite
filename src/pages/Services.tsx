@@ -14,6 +14,7 @@ function Services() {
         description="Explore ViankaX web design, development, AI automation, CRM, business automation, SEO, AEO, and conversion optimization services."
       />
       <PageHero
+        planet="blue"
         eyebrow="Connected capabilities"
         title="Technology designed around the business."
         description="From the customer-facing experience to the systems operating behind it, ViankaX designs and implements the complete digital infrastructure for growth."

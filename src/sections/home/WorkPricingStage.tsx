@@ -8,6 +8,7 @@ import {
   WandSparkles,
 } from "lucide-react";
 import Button from "@/components/ui/Button";
+import PortfolioArtwork from "@/components/portfolio/PortfolioArtwork";
 import Container from "@/components/ui/Container";
 import IlluminatedPanel from "@/components/ui/IlluminatedPanel";
 import Section from "@/components/ui/Section";
@@ -22,7 +23,7 @@ const steps = [
 ] as const;
 
 function FeaturedWork() {
-  const project = projects[3];
+  const project = projects.find((item) => item.name === "Lounge Masters")!;
   return (
     <Section className="lower-depth">
       <Container>
@@ -79,36 +80,7 @@ function FeaturedWork() {
                 ))}
               </div>
             </div>
-            <div className="relative min-h-[23rem] sm:min-h-[29rem]">
-              <div className="absolute left-[3%] right-[3%] top-[7%] rounded-xl border border-white/10 bg-[#07090e] p-2 shadow-[0_35px_90px_rgba(0,0,0,.72)] sm:p-3">
-                <div className="flex h-7 items-center gap-1.5 border-b border-white/[.06] px-2">
-                  <i className="h-1.5 w-1.5 rounded-full bg-white/20" />
-                  <i className="h-1.5 w-1.5 rounded-full bg-white/10" />
-                  <span className="ml-auto text-[.45rem] uppercase tracking-[.18em] text-slate-600">
-                    Lounge Masters
-                  </span>
-                </div>
-                <div className="relative aspect-[16/9] overflow-hidden rounded-b-lg bg-[linear-gradient(125deg,#12100f,#27221f_48%,#0a0b0e)]">
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_68%_42%,rgba(183,138,102,.25),transparent_34%)]" />
-                  <div className="absolute left-[8%] top-[17%] max-w-[44%]">
-                    <p className="font-display text-[clamp(.8rem,2vw,1.8rem)] font-semibold leading-tight text-white">
-                      Furniture designed for the way you live.
-                    </p>
-                    <div className="mt-3 h-1.5 w-2/3 rounded bg-white/10" />
-                    <div className="mt-2 h-1.5 w-1/2 rounded bg-white/[.06]" />
-                    <div className="mt-5 h-6 w-20 rounded bg-white text-[.45rem] text-black" />
-                  </div>
-                  <div className="absolute bottom-[13%] right-[8%] h-[35%] w-[43%] rounded-t-[45%] border border-white/[.08] bg-gradient-to-b from-[#4b4038] to-[#181715] shadow-2xl" />
-                </div>
-              </div>
-              <div className="absolute bottom-[2%] right-[1%] w-[24%] rounded-[1.1rem] border border-white/15 bg-[#080a0f] p-1.5 shadow-[0_25px_60px_rgba(0,0,0,.75)]">
-                <div className="aspect-[9/17] rounded-[.8rem] bg-gradient-to-b from-[#24201e] to-[#090a0c] p-3">
-                  <div className="h-1.5 w-1/2 rounded bg-white/15" />
-                  <div className="mt-5 h-12 rounded bg-white/[.06]" />
-                  <div className="mt-3 h-2 w-3/4 rounded bg-white/10" />
-                </div>
-              </div>
-            </div>
+            <PortfolioArtwork project={project.name} src={project.image} />
           </div>
         </IlluminatedPanel>
       </Container>

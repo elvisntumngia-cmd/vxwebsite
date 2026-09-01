@@ -9,6 +9,12 @@ import {
   Workflow,
   type LucideIcon,
 } from "lucide-react";
+import dextaPestControlImage from "@/assets/images/dexta-pest-control.webp";
+import loungeMastersImage from "@/assets/images/lounge-masters.webp";
+import maxxAutoDetailingImage from "@/assets/images/maxx-auto-detailing.webp";
+import valoLegalImage from "@/assets/images/valo-legal.webp";
+import yvHealthBeautyImage from "@/assets/images/yv-health-beauty.webp";
+import zarInteriorsImage from "@/assets/images/zar-interiors.webp";
 
 export type Service = {
   title: string;
@@ -158,14 +164,21 @@ export const projects = [
       "A connected client-acquisition system spanning a focused landing experience, GoHighLevel CRM, Vapi AI receptionist, appointment booking, call notes, segmentation, and trigger-based follow-up.",
     tags: ["Web", "GoHighLevel", "Vapi", "Automation"],
     accent: "from-blue-500/30 via-cyan-400/10 to-transparent",
+    image: valoLegalImage,
   },
   {
-    name: "Securemedy",
-    sector: "Workforce technology",
+    name: "DeXta Pest Control",
+    sector: "Home Services / Pest Control",
     description:
-      "Digital operations concepts for a security workforce, including AI reception, website and employee-portal chat, recruitment automation, and AWS-connected systems.",
-    tags: ["Voice AI", "Chatbots", "AWS", "Operations"],
+      "A conversion-focused website for a residential and commercial pest-control company, designed to turn local traffic into quote requests and service bookings.",
+    tags: [
+      "Web Design & Development",
+      "Lead Capture",
+      "Local SEO",
+      "Conversion Optimization",
+    ],
     accent: "from-emerald-400/25 via-cyan-400/10 to-transparent",
+    image: dextaPestControlImage,
   },
   {
     name: "ZAR Interiors",
@@ -174,6 +187,7 @@ export const projects = [
       "A growth and technology roadmap bringing together marketing campaigns, operational thinking, digital adoption, and an e-commerce vision.",
     tags: ["Growth", "Commerce", "Operations"],
     accent: "from-purple-500/30 via-fuchsia-400/10 to-transparent",
+    image: zarInteriorsImage,
   },
   {
     name: "Lounge Masters",
@@ -182,6 +196,7 @@ export const projects = [
       "A responsive WooCommerce store for custom furniture with a clear product journey, checkout, and payment integration.",
     tags: ["WooCommerce", "E-commerce", "Responsive"],
     accent: "from-orange-400/25 via-purple-400/10 to-transparent",
+    image: loungeMastersImage,
   },
   {
     name: "YV Health & Beauty",
@@ -190,6 +205,21 @@ export const projects = [
       "Digital work supporting a modern wellness and skincare presence with a clear path toward a more connected customer experience.",
     tags: ["Brand experience", "Web", "Growth"],
     accent: "from-pink-400/25 via-purple-400/10 to-transparent",
+    image: yvHealthBeautyImage,
+  },
+  {
+    name: "MaXX Auto Detailing",
+    sector: "Mobile Auto Detailing / Home Services",
+    description:
+      "A mobile-first website for an on-demand auto detailing business, designed to showcase services, capture local customers, and make booking a professional detail simple from any device.",
+    tags: [
+      "Web Design & Development",
+      "Online Booking",
+      "Local SEO",
+      "Conversion Optimization",
+    ],
+    accent: "from-yellow-400/20 via-orange-400/10 to-transparent",
+    image: maxxAutoDetailingImage,
   },
 ];
 

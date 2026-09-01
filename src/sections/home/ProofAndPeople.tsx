@@ -1,4 +1,4 @@
-import { Bot, ShoppingBag, Workflow } from "lucide-react";
+import { MousePointerClick, ShoppingBag, Workflow } from "lucide-react";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
 const proof = [
@@ -8,9 +8,9 @@ const proof = [
     "Landing experience, CRM, AI receptionist, booking, segmentation and automated follow-up.",
   ],
   [
-    "Securemedy",
-    Bot,
-    "AI reception concepts, chatbots, recruitment automation and workforce operations technology.",
+    "DeXta Pest Control",
+    MousePointerClick,
+    "A conversion-focused local-services website supporting quote requests, service booking, and lead capture.",
   ],
   [
     "Lounge Masters",

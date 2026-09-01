@@ -14,6 +14,7 @@ function Pricing() {
         description="Flexible ViankaX engagement models for focused launches, connected growth systems, and custom AI and automation infrastructure."
       />
       <PageHero
+        planet="emerald"
         eyebrow="Flexible engagements"
         title="Scope before numbers."
         description="The right investment depends on what needs to connect, how much complexity exists, and where the system can create the most value. We define that together before work begins."
